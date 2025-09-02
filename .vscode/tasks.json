@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install: dev",
+      "type": "shell",
+      "command": "pip install -r requirements.txt && pip install -r requirements-dev.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "Format (Black + isort)",
+      "type": "shell",
+      "command": "isort . && black .",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint (Ruff)",
+      "type": "shell",
+      "command": "ruff check .",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test (pytest)",
+      "type": "shell",
+      "command": "pytest -q",
+      "problemMatcher": []
+    },
+    {
+      "label": "Serve (uvicorn)",
+      "type": "shell",
+      "command": "uvicorn app.main:app --reload --port 8000",
+      "problemMatcher": []
+    }
+  ]
+}

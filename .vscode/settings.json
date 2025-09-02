@@ -1,0 +1,22 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit",
+    "source.fixAll.ruff": "explicit"
+  },
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.rulers": [100],
+  "editor.tabSize": 4,
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "black-formatter.args": ["--line-length", "100", "--preview"],
+  "isort.args": ["--profile", "black", "--line-length", "100"],
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["-q", "tests"],
+  "python.envFile": "${workspaceFolder}/.env",
+  "files.eol": "\n"
+}
